@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-has-hero data-theme="dark" class="astro-bguv2lll">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Welcome to Lyvo Framework | Lyvo Docs</title>
+  <link rel="canonical"/>
+  <link rel="shortcut icon" href="favicon.png" type="image/svg+xml"/>
+  <meta name="generator" content="Astro v4.16.17"/>
+  <meta name="generator" content="Starlight v0.29.2"/>
+  <meta property="og:title" content="Welcome to Lyvo Framework"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url"/>
+  <meta property="og:locale" content="en"/>
+  <meta property="og:description" content="Build Production-ready Agentic Workflow with Natural Language"/>
+  <meta property="og:site_name" content="Lyvo Docs"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="description" content="Build Production-ready Agentic Workflow with Natural Language"/>
+  <script>
+      window.StarlightThemeProvider = (() => {
+          const storedTheme =
+              typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+          const theme =
+              storedTheme ||
+              (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+          return {
+              updatePickers(theme = storedTheme || 'auto') {
+                  document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+                      const select = picker.querySelector('select');
+                      if (select) select.value = theme;
+                      /** @type {HTMLTemplateElement | null} */
+                      const tmpl = document.querySelector(`#theme-icons`);
+                      const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+                      if (newIcon) {
+                          const oldIcon = picker.querySelector('svg.label-icon');
+                          if (oldIcon) {
+                              oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+                          }
+                      }
+                  });
+              },
+          };
+      })();
+  </script>
+  <template id="theme-icons">
+    <svg aria-hidden="true" class="light astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+         style="--sl-icon-size: 1em;">
+      <path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/>
+    </svg>
+    <svg aria-hidden="true" class="dark astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+         style="--sl-icon-size: 1em;">
+      <path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/>
+    </svg>
+    <svg aria-hidden="true" class="auto astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+         style="--sl-icon-size: 1em;">
+      <path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/>
+    </svg>
+  </template>
+  <link rel="stylesheet" href="astro/style.css">
+  <style>:root {
+      --sl-badge-default-border: var(--sl-color-accent);
+      --sl-badge-default-bg: var(--sl-color-accent-low);
+      --sl-badge-default-text: #fff;
+      --sl-badge-note-border: var(--sl-color-blue);
+      --sl-badge-note-bg: var(--sl-color-blue-low);
+      --sl-badge-note-text: #fff;
+      --sl-badge-danger-border: var(--sl-color-red);
+      --sl-badge-danger-bg: var(--sl-color-red-low);
+      --sl-badge-danger-text: #fff;
+      --sl-badge-success-border: var(--sl-color-green);
+      --sl-badge-success-bg: var(--sl-color-green-low);
+      --sl-badge-success-text: #fff;
+      --sl-badge-caution-border: var(--sl-color-orange);
+      --sl-badge-caution-bg: var(--sl-color-orange-low);
+      --sl-badge-caution-text: #fff;
+      --sl-badge-tip-border: var(--sl-color-purple);
+      --sl-badge-tip-bg: var(--sl-color-purple-low);
+      --sl-badge-tip-text: #fff
+  }
+
+  [data-theme=light]:root {
+      --sl-badge-default-bg: var(--sl-color-accent-high);
+      --sl-badge-note-bg: var(--sl-color-blue-high);
+      --sl-badge-danger-bg: var(--sl-color-red-high);
+      --sl-badge-success-bg: var(--sl-color-green-high);
+      --sl-badge-caution-bg: var(--sl-color-orange-high);
+      --sl-badge-tip-bg: var(--sl-color-purple-high)
+  }
+
+  .sl-badge:where(.astro-avdet4wd) {
+      display: inline-block;
+      border: 1px solid var(--sl-color-border-badge);
+      border-radius: .25rem;
+      font-family: var(--sl-font-system-mono);
+      line-height: normal;
+      color: var(--sl-color-text-badge);
+      background-color: var(--sl-color-bg-badge);
+      overflow-wrap: anywhere
+  }
+
+  .sidebar-content .sl-badge:where(.astro-avdet4wd) {
+      line-height: 1;
+      font-size: var(--sl-text-xs);
+      padding: .125rem .375rem
+  }
+
+  .sidebar-content a[aria-current=page] > .sl-badge:where(.astro-avdet4wd) {
+      --sl-color-bg-badge: transparent;
+      --sl-color-border-badge: currentColor;
+      color: inherit
+  }
+
+  .default:where(.astro-avdet4wd) {
+      --sl-color-bg-badge: var(--sl-badge-default-bg);
+      --sl-color-border-badge: var(--sl-badge-default-border);
+      --sl-color-text-badge: var(--sl-badge-default-text)
+  }
+
+  .note:where(.astro-avdet4wd) {
+      --sl-color-bg-badge: var(--sl-badge-note-bg);
+      --sl-color-border-badge: var(--sl-badge-note-border);
+      --sl-color-text-badge: var(--sl-badge-note-text)
+  }
+
+  .danger:where(.astro-avdet4wd) {
+      --sl-color-bg-badge: var(--sl-badge-danger-bg);
+      --sl-color-border-badge: var(--sl-badge-danger-border);
+      --sl-color-text-badge: var(--sl-badge-danger-text)
+  }
+
+  .success:where(.astro-avdet4wd) {
+      --sl-color-bg-badge: var(--sl-badge-success-bg);
+      --sl-color-border-badge: var(--sl-badge-success-border);
+      --sl-color-text-badge: var(--sl-badge-success-text)
+  }
+
+  .tip:where(.astro-avdet4wd) {
+      --sl-color-bg-badge: var(--sl-badge-tip-bg);
+      --sl-color-border-badge: var(--sl-badge-tip-border);
+      --sl-color-text-badge: var(--sl-badge-tip-text)
+  }
+
+  .caution:where(.astro-avdet4wd) {
+      --sl-color-bg-badge: var(--sl-badge-caution-bg);
+      --sl-color-border-badge: var(--sl-badge-caution-border);
+      --sl-color-text-badge: var(--sl-badge-caution-text)
+  }
+
+  .small:where(.astro-avdet4wd) {
+      font-size: var(--sl-text-xs);
+      padding: .125rem .25rem
+  }
+
+  .medium:where(.astro-avdet4wd) {
+      font-size: var(--sl-text-sm);
+      padding: .175rem .35rem
+  }
+
+  .large:where(.astro-avdet4wd) {
+      font-size: var(--sl-text-base);
+      padding: .225rem .45rem
+  }
+
+  .sl-markdown-content :is(h1,h2,h3,h4,h5,h6) .sl-badge:where(.astro-avdet4wd) {
+      vertical-align: middle
+  }
+
+  .card-grid:where(.astro-zntqmydn) {
+      display: grid;
+      grid-template-columns:100%;
+      gap: 1rem
+  }
+
+  .card-grid:where(.astro-zntqmydn) > * {
+      margin-top: 0 !important
+  }
+
+  @media (min-width: 50rem) {
+      .card-grid:where(.astro-zntqmydn) {
+          grid-template-columns:1fr 1fr;
+          gap: 1.5rem
+      }
+
+      .stagger:where(.astro-zntqmydn) {
+          --stagger-height: 5rem;
+          padding-bottom: var(--stagger-height)
+      }
+
+      .stagger:where(.astro-zntqmydn) > *:nth-child(2n) {
+          transform: translateY(var(--stagger-height))
+      }
+  }
+
+  .card:where(.astro-v5tidmuc) {
+      --sl-card-border: var(--sl-color-purple);
+      --sl-card-bg: var(--sl-color-purple-low);
+      border: 1px solid var(--sl-color-gray-5);
+      background-color: var(--sl-color-black);
+      padding: clamp(1rem, calc(.125rem + 3vw), 2.5rem);
+      flex-direction: column;
+      gap: clamp(.5rem, calc(.125rem + 1vw), 1rem)
+  }
+
+  .card:where(.astro-v5tidmuc):nth-child(4n+1) {
+      --sl-card-border: var(--sl-color-orange);
+      --sl-card-bg: var(--sl-color-orange-low)
+  }
+
+  .card:where(.astro-v5tidmuc):nth-child(4n+3) {
+      --sl-card-border: var(--sl-color-green);
+      --sl-card-bg: var(--sl-color-green-low)
+  }
+
+  .card:where(.astro-v5tidmuc):nth-child(4n+4) {
+      --sl-card-border: var(--sl-color-red);
+      --sl-card-bg: var(--sl-color-red-low)
+  }
+
+  .card:where(.astro-v5tidmuc):nth-child(4n+5) {
+      --sl-card-border: var(--sl-color-blue);
+      --sl-card-bg: var(--sl-color-blue-low)
+  }
+
+  .title:where(.astro-v5tidmuc) {
+      font-weight: 600;
+      font-size: var(--sl-text-h4);
+      color: var(--sl-color-white);
+      line-height: var(--sl-line-height-headings);
+      gap: 1rem;
+      align-items: center
+  }
+
+  .card:where(.astro-v5tidmuc) .icon:where(.astro-v5tidmuc) {
+      border: 1px solid var(--sl-card-border);
+      background-color: var(--sl-card-bg);
+      padding: .2em;
+      border-radius: .25rem
+  }
+
+  .card:where(.astro-v5tidmuc) .body:where(.astro-v5tidmuc) {
+      margin: 0;
+      font-size: clamp(var(--sl-text-sm), calc(.5rem + 1vw), var(--sl-text-body))
+  }
+
+  svg:where(.astro-c6vsoqas) {
+      color: var(--sl-icon-color);
+      font-size: var(--sl-icon-size, 1em);
+      width: 1em;
+      height: 1em
+  }
+
+  .sl-steps {
+      --bullet-size: calc(var(--sl-line-height) * 1rem);
+      --bullet-margin: .375rem;
+      list-style: none;
+      counter-reset: steps-counter var(--sl-steps-start, 0);
+      padding-inline-start: 0
+  }
+
+  .sl-steps > li {
+      counter-increment: steps-counter;
+      position: relative;
+      padding-inline-start: calc(var(--bullet-size) + 1rem);
+      padding-bottom: 1px;
+      min-height: calc(var(--bullet-size) + var(--bullet-margin))
+  }
+
+  .sl-steps > li + li {
+      margin-top: 0
+  }
+
+  .sl-steps > li:before {
+      content: counter(steps-counter);
+      position: absolute;
+      top: 0;
+      inset-inline-start: 0;
+      width: var(--bullet-size);
+      height: var(--bullet-size);
+      line-height: var(--bullet-size);
+      font-size: var(--sl-text-xs);
+      font-weight: 600;
+      text-align: center;
+      color: var(--sl-color-white);
+      background-color: var(--sl-color-gray-6);
+      border-radius: 99rem;
+      box-shadow: inset 0 0 0 1px var(--sl-color-gray-5)
+  }
+
+  .sl-steps > li:after {
+      --guide-width: 1px;
+      content: "";
+      position: absolute;
+      top: calc(var(--bullet-size) + var(--bullet-margin));
+      bottom: var(--bullet-margin);
+      inset-inline-start: calc((var(--bullet-size) - var(--guide-width)) / 2);
+      width: var(--guide-width);
+      background-color: var(--sl-color-hairline-light)
+  }
+
+  .sl-steps > li > :first-child {
+      --lh: calc(1em * var(--sl-line-height));
+      --shift-y: calc(.5 * (var(--bullet-size) - var(--lh)));
+      transform: translateY(var(--shift-y));
+      margin-bottom: var(--shift-y)
+  }
+
+  .sl-steps > li > :first-child:where(h1,h2,h3,h4,h5,h6) {
+      --lh: calc(1em * var(--sl-line-height-headings))
+  }
+
+  @supports (--prop: 1lh) {
+      .sl-steps > li > :first-child {
+          --lh: 1lh
+      }
+  }
+
+  .sl-link-button:where(.astro-xwgiixxa) {
+      align-items: center;
+      border: 1px solid transparent;
+      border-radius: 999rem;
+      display: inline-flex;
+      font-size: var(--sl-text-sm);
+      gap: .5em;
+      line-height: 1.1875;
+      outline-offset: .25rem;
+      padding: .4375rem 1.125rem;
+      text-decoration: none
+  }
+
+  .sl-link-button:where(.astro-xwgiixxa).primary {
+      background: var(--sl-color-text-accent);
+      border-color: var(--sl-color-text-accent);
+      color: var(--sl-color-black)
+  }
+
+  .sl-link-button:where(.astro-xwgiixxa).primary:hover {
+      color: var(--sl-color-black)
+  }
+
+  .sl-link-button:where(.astro-xwgiixxa).secondary {
+      border-color: inherit;
+      color: var(--sl-color-white)
+  }
+
+  .sl-link-button:where(.astro-xwgiixxa).minimal {
+      color: var(--sl-color-white);
+      padding-inline: 0
+  }
+
+  .sl-link-button:where(.astro-xwgiixxa) svg {
+      flex-shrink: 0
+  }
+
+  @media (min-width: 50rem) {
+      .sl-link-button:where(.astro-xwgiixxa) {
+          font-size: var(--sl-text-base);
+          padding: .9375rem 1.25rem
+      }
+  }
+
+  .sl-markdown-content .sl-link-button:where(.astro-xwgiixxa) {
+      margin-inline-end: 1rem
+  }
+
+  .sl-markdown-content .sl-link-button:where(.astro-xwgiixxa):not(:where(p *)) {
+      margin-block: 1rem
+  }
+  </style>
+  <script type="module" src="astro/hoisted.BUgxmRNZ.js"></script>
+  <script type="module" src="astro/page.7qqag-5g.js"></script>
+  <script src="astro/Tabs.astro_astro_type_script_index_0_lang.3nBd5krW.js" type="module"></script>
+</head>
+<body class="astro-bguv2lll"><a href="index.html#_top" class="astro-7q3lir66">Skip to content</a>
+<div class="page sl-flex astro-vrdttmbt">
+  <header class="header astro-vrdttmbt">
+    <div class="header sl-flex astro-kmkmnagf">
+      <div class="title-wrapper sl-flex astro-kmkmnagf"><a href="index.html" class="site-title sl-flex astro-m46x6ez3">
+        <span class="astro-m46x6ez3"> Lyvo Docs </span> </a></div>
+      <div class="sl-flex astro-kmkmnagf">
+        <site-search data-translations="{&#34;placeholder&#34;:&#34;Search&#34;}" class="astro-v37mnknz">
+          <button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-v37mnknz">
+            <svg aria-hidden="true" class="astro-v37mnknz astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24"
+                 fill="currentColor" style="--sl-icon-size: 1em;">
+              <path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/>
+            </svg>
+            <span class="sl-hidden md:sl-block astro-v37mnknz" aria-hidden="true">Search</span> <kbd
+                  class="sl-hidden md:sl-flex astro-v37mnknz" style="display: none;"> <kbd
+                  class="astro-v37mnknz">Ctrl</kbd><kbd class="astro-v37mnknz">K</kbd> </kbd></button>
+          <dialog style="padding:0" aria-label="Search" class="astro-v37mnknz">
+            <div class="dialog-frame sl-flex astro-v37mnknz">
+              <button data-close-modal class="sl-flex md:sl-hidden astro-v37mnknz"> Cancel</button>
+              <div class="search-container astro-v37mnknz">
+                <div id="starlight__search" class="astro-v37mnknz"></div>
+              </div>
+            </div>
+          </dialog>
+        </site-search>
+        <script>
+            (() => {
+                const openBtn = document.querySelector('button[data-open-modal]');
+                const shortcut = openBtn?.querySelector('kbd');
+                if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+                const platformKey = shortcut.querySelector('kbd');
+                if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+                    platformKey.textContent = '⌘';
+                    openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+                }
+                shortcut.style.display = '';
+            })();
+        </script>
+      </div>
+      <div class="sl-hidden md:sl-flex right-group astro-kmkmnagf">
+        <div class="sl-flex social-icons astro-kmkmnagf"><a href="https://github.com/FellouAI/lyvo" rel="me"
+                                                            class="sl-flex astro-wy4te6ga"><span
+                class="sr-only astro-wy4te6ga">GitHub</span>
+          <svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24"
+               fill="currentColor" style="--sl-icon-size: 1em;">
+            <path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/>
+          </svg>
+        </a></div>
+        <starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span
+                class="sr-only astro-4yphtoen">Select theme</span>
+          <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16"
+               viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;">
+            <path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/>
+          </svg>
+          <select value="auto" class="astro-4yphtoen">
+            <option value="dark" class="astro-4yphtoen">Dark</option>
+            <option value="light" class="astro-4yphtoen">Light</option>
+            <option value="auto" selected class="astro-4yphtoen">Auto</option>
+          </select>
+          <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16"
+               viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;">
+            <path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/>
+          </svg>
+        </label></starlight-theme-select>
+        <script>
+            StarlightThemeProvider.updatePickers();
+        </script>
+      </div>
+    </div>
+  </header>
+  <div class="main-frame astro-vrdttmbt">
+    <div class="lg:sl-flex astro-67yu43on">
+      <div class="main-pane astro-67yu43on">
+        <main data-pagefind-body lang="en" dir="ltr" class="astro-bguv2lll">
+          <div class="content-panel astro-7nkwcw3z">
+            <div class="sl-container astro-7nkwcw3z">
+              <div class="hero astro-jbfsktt5"><img src="astro/lyvo-logo.png" loading="eager"
+                                                    decoding="async" alt="" class="astro-jbfsktt5" width="400"
+                                                    height="400">
+                <div class="sl-flex stack astro-jbfsktt5">
+                  <div class="sl-flex copy astro-jbfsktt5"><h1 id="_top" data-page-title class="astro-jbfsktt5">Welcome
+                    to Lyvo Framework</h1>
+                    <div class="tagline astro-jbfsktt5">Build Production-ready Agentic Workflow with Natural Language
+                    </div>
+                  </div>
+                  <div class="sl-flex actions astro-jbfsktt5"><a
+                          class="sl-link-button not-content primary astro-jbfsktt5 astro-xwgiixxa"
+                          href="getting-started/quickstart.html"> QuickStart
+                    <svg aria-hidden="true" class="astro-xwgiixxa astro-c6vsoqas" width="16" height="16"
+                         viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;">
+                      <path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/>
+                    </svg>
+                  </a> <a class="sl-link-button not-content minimal astro-jbfsktt5 astro-xwgiixxa"
+                          href="getting-started/lyvo.html"> Lyvo Overview
+                    <svg aria-hidden="true" class="astro-xwgiixxa astro-c6vsoqas" width="16" height="16"
+                         viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;">
+                      <path d="M19.33 10.18a1 1 0 0 1-.77 0 1 1 0 0 1-.62-.93l.01-1.83-8.2 8.2a1 1 0 0 1-1.41-1.42l8.2-8.2H14.7a1 1 0 0 1 0-2h4.25a1 1 0 0 1 1 1v4.25a1 1 0 0 1-.62.93Z"/>
+                      <path d="M11 4a1 1 0 1 1 0 2H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4a1 1 0 1 1 2 0v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h4Z"/>
+                    </svg>
+                  </a></div>
+                </div>
+              </div>
+              <div class="sl-markdown-content"><h2 id="learn-more">Learn More</h2>
+                <div class="card-grid astro-zntqmydn">
+                  <article class="card sl-flex astro-v5tidmuc">
+                    <p class="title sl-flex astro-v5tidmuc">
+                      <svg aria-hidden="true" class="icon astro-v5tidmuc astro-c6vsoqas" width="16" height="16"
+                           viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;">
+                        <path d="M17 22H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h1a4 4 0 0 1 7.3-2.18c.448.64.692 1.4.7 2.18h3a1 1 0 0 1 1 1v3a4 4 0 0 1 2.18 7.3A3.86 3.86 0 0 1 18 18v3a1 1 0 0 1-1 1ZM5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11v-3.18a1 1 0 0 1 1.33-.95 1.77 1.77 0 0 0 1.74-.23 2 2 0 0 0 .93-1.37 2 2 0 0 0-.48-1.59 1.89 1.89 0 0 0-2.17-.55 1 1 0 0 1-1.33-.95V8h-3.2a1 1 0 0 1-1-1.33 1.77 1.77 0 0 0-.23-1.74 1.939 1.939 0 0 0-3-.43A2 2 0 0 0 8 6c.002.23.046.456.13.67A1 1 0 0 1 7.18 8H5Z"/>
+                      </svg>
+                      <span class="astro-v5tidmuc">Use Lyvo in Browser Extension</span></p>
+                    <div class="body astro-v5tidmuc"><p>Learn more in <a href="browseruse/browser-extension.html">Browser
+                      Use - Browser Extension</a>.</p></div>
+                  </article>
+                  <article class="card sl-flex astro-v5tidmuc">
+                    <p class="title sl-flex astro-v5tidmuc">
+                      <svg aria-hidden="true" class="icon astro-v5tidmuc astro-c6vsoqas" width="16" height="16"
+                           viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;">
+                        <path d="M12 23.96c-.34 0-.66-.1-.96-.25l-3.03-1.73c-.45-.25-.22-.33-.09-.38.62-.2.73-.24 1.37-.6.07-.04.16-.02.23.03l2.32 1.34c.1.05.2.05.27 0l9.1-5.08a.27.27 0 0 0 .13-.24V6.9c0-.11-.05-.2-.14-.24L12.11 1.6c-.09-.05-.2-.05-.27 0L2.75 6.66c-.09.04-.13.15-.13.24v10.14c0 .1.04.2.13.25l2.49 1.38c1.34.66 2.18-.1 2.18-.88V7.78c0-.13.12-.26.28-.26h1.16c.13 0 .27.1.27.26v10.01c0 1.74-.98 2.75-2.69 2.75-.52 0-.93 0-2.1-.55l-2.38-1.32a1.85 1.85 0 0 1-.96-1.6V6.92c0-.66.36-1.28.96-1.6l9.08-5.1a2.1 2.1 0 0 1 1.92 0l9.08 5.08c.6.33.96.95.96 1.61v10.15c0 .66-.36 1.27-.96 1.6l-9.08 5.09a2.4 2.4 0 0 1-.96.2m2.8-6.98c-3.98 0-4.8-1.76-4.8-3.26 0-.13.11-.26.27-.26h1.18c.14 0 .25.08.25.22.19 1.16.71 1.73 3.12 1.73 1.92 0 2.74-.41 2.74-1.4 0-.58-.23-1-3.21-1.28-2.49-.24-4.04-.77-4.04-2.68 0-1.79 1.55-2.84 4.15-2.84 2.91 0 4.35.96 4.53 3.08a.35.35 0 0 1-.07.2.27.27 0 0 1-.18.08h-1.18a.27.27 0 0 1-.25-.2c-.28-1.2-.98-1.6-2.85-1.6-2.1 0-2.35.7-2.35 1.23 0 .64.3.84 3.12 1.19 2.8.35 4.13.86 4.13 2.75-.03 1.94-1.67 3.04-4.56 3.04"/>
+                      </svg>
+                      <span class="astro-v5tidmuc">Use Lyvo in Node.js</span></p>
+                    <div class="body astro-v5tidmuc"><p>Learn more in <a href="computeruse/computer-node.html">Computer
+                      Use - Node.js</a>.</p></div>
+                  </article>
+                  <article class="card sl-flex astro-v5tidmuc">
+                    <p class="title sl-flex astro-v5tidmuc">
+                      <svg aria-hidden="true" class="icon astro-v5tidmuc astro-c6vsoqas" width="16" height="16"
+                           viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;">
+                        <path d="M18.955 15.993L18.993 15.993Q18.993 16.107 18.993 16.297L18.993 16.297Q19.221 18.615 19.221 19.774Q19.221 20.933 18.651 21.693Q18.081 22.453 17.207 22.529L17.207 22.529Q16.333 22.719 15.307 22.301L15.307 22.301Q14.547 21.921 13.179 21.009L13.179 21.009Q12.305 20.439 11.849 20.173L11.849 20.173Q10.671 21.123 9.949 21.579L9.949 21.579Q9.341 21.997 8.771 22.187L8.771 22.187Q7.707 22.643 6.795 22.472Q5.883 22.301 5.332 21.579Q4.781 20.857 4.762 19.679Q4.743 18.501 4.971 15.879L4.971 15.879Q3.527 15.423 2.805 14.929L2.805 14.929Q1.855 14.473 0.905 13.523L0.905 13.523Q0.145 12.725 0.183 11.794Q0.221 10.863 1.057 10.065L1.057 10.065Q1.665 9.343 2.691 8.849L2.691 8.849Q3.299 8.507 4.591 8.051L4.591 8.051Q4.667 8.051 4.838 7.994Q5.009 7.937 5.085 7.937L5.085 7.937L4.743 5.315Q4.705 4.479 4.971 3.073L4.971 3.073Q5.237 2.085 6.054 1.667Q6.871 1.249 7.935 1.515L7.935 1.515Q8.885 1.743 9.835 2.351L9.835 2.351Q10.519 2.769 11.393 3.529L11.393 3.529Q11.545 3.605 11.735 3.871L11.735 3.871L11.849 4.023Q13.749 2.579 14.813 1.971L14.813 1.971Q16.029 1.173 17.207 1.515L17.207 1.515Q18.081 1.705 18.594 2.446Q19.107 3.187 19.221 4.365L19.221 4.365L19.221 6.265Q19.221 6.645 19.031 7.405L19.031 7.405Q18.917 7.899 18.841 8.165L18.841 8.165Q19.905 8.507 20.874 8.982Q21.843 9.457 22.261 9.761L22.261 9.761Q22.983 10.255 23.401 10.882Q23.819 11.509 23.819 12.193Q23.819 12.877 23.401 13.504Q22.983 14.131 22.261 14.625L22.261 14.625Q21.805 14.929 20.855 15.423L20.855 15.423Q20.171 15.537 18.955 15.993L18.955 15.993ZM10.861 15.841L12.077 15.879Q12.267 15.879 12.685 15.841L12.685 15.841Q13.255 15.765 13.521 15.765L13.521 15.765Q14.015 15.765 14.357 15.271L14.357 15.271Q15.535 13.371 15.991 12.307L15.991 12.307Q16.105 12.155 16.105 11.927Q16.105 11.699 15.991 11.623L15.991 11.623Q15.421 10.521 14.205 8.659L14.205 8.659Q14.053 8.279 13.635 8.279L13.635 8.279Q11.621 8.279 10.557 8.165L10.557 8.165Q9.607 8.165 9.113 9.001L9.113 9.001Q8.657 9.723 8.391 10.179L8.391 10.179L7.859 11.167Q7.517 11.661 7.460 11.870Q7.403 12.079 7.460 12.288Q7.517 12.497 7.859 13.029L7.859 13.029L8.391 13.979L8.847 14.739Q9.227 15.347 9.379 15.499L9.379 15.499Q9.607 15.765 9.911 15.803L9.911 15.803Q10.139 15.841 10.861 15.841L10.861 15.841ZM5.199 14.929L5.199 14.929Q5.921 13.029 6.263 12.193L6.263 12.193L6.263 11.737L5.199 9.001Q3.071 9.647 1.893 10.521L1.893 10.521Q1.057 11.167 1.057 11.908Q1.057 12.649 1.893 13.257L1.893 13.257Q2.501 13.903 3.451 14.321L3.451 14.321Q4.021 14.587 5.199 14.929ZM18.613 8.887L18.613 8.887Q18.157 9.951 17.435 11.851L17.435 11.851L17.397 11.965Q17.359 12.079 17.435 12.079L17.435 12.079Q18.157 13.979 18.613 15.157L18.613 15.157Q19.069 14.929 20.019 14.435L20.019 14.435Q21.273 13.865 21.805 13.523L21.805 13.523Q22.793 12.877 22.793 12.079Q22.793 11.281 21.843 10.673L21.843 10.673Q21.197 10.103 19.753 9.419L19.753 9.419Q18.955 9.077 18.613 8.887ZM5.883 7.481L5.921 7.671Q7.821 7.481 8.885 7.215L8.885 7.215Q8.961 7.215 9.037 7.139L9.037 7.139L9.113 7.101Q9.797 6.151 11.013 4.707L11.013 4.707Q10.063 3.909 9.569 3.529L9.569 3.529Q8.733 2.883 7.935 2.579L7.935 2.579Q6.947 2.237 6.339 2.598Q5.731 2.959 5.541 4.023L5.541 4.023Q5.465 4.745 5.579 5.695L5.579 5.695Q5.655 6.265 5.883 7.481L5.883 7.481ZM17.777 7.709L17.777 7.671Q17.777 7.633 17.834 7.462Q17.891 7.291 17.891 7.215L17.891 7.215Q18.157 6.037 18.157 5.391L18.157 5.391Q18.233 4.327 17.891 3.529L17.891 3.529Q17.739 2.921 17.321 2.655Q16.903 2.389 16.371 2.465L16.371 2.465Q15.421 2.617 14.509 3.225L14.509 3.225Q13.939 3.567 12.951 4.479L12.951 4.479L12.685 4.707Q13.293 5.543 14.471 6.987L14.471 6.987L14.813 7.329L17.777 7.709ZM5.921 16.221L5.921 16.221Q5.883 16.449 5.807 16.867L5.807 16.867Q5.579 17.931 5.541 18.425L5.541 18.425Q5.465 19.299 5.693 20.059L5.693 20.059Q5.845 20.933 6.434 21.275Q7.023 21.617 7.935 21.351L7.935 21.351Q8.695 21.123 9.493 20.591L9.493 20.591Q9.949 20.249 10.823 19.489L10.823 19.489L11.127 19.223Q10.443 18.273 9.227 16.829L9.227 16.829Q8.999 16.601 8.885 16.601L8.885 16.601Q7.517 16.601 5.921 16.221ZM12.571 19.223L12.571 19.223Q13.065 19.869 14.015 20.553L14.015 20.553Q14.889 21.199 15.649 21.465L15.649 21.465Q17.549 22.035 17.891 20.173L17.891 20.173Q18.043 19.337 17.967 18.349L17.967 18.349Q17.929 17.741 17.701 16.525L17.701 16.525L17.663 16.373L16.903 16.449Q15.307 16.563 14.585 16.829L14.585 16.829Q14.243 17.019 13.939 17.361L13.939 17.361Q13.749 17.589 13.445 18.045L13.445 18.045Q13.179 18.425 13.046 18.634Q12.913 18.843 12.571 19.223ZM10.443 7.101L13.293 7.101Q13.027 6.797 12.552 6.265Q12.077 5.733 11.849 5.429L11.849 5.429L11.659 5.695Q10.937 6.607 10.443 7.101L10.443 7.101ZM12.837 17.361L13.293 16.829L10.557 16.829Q10.785 17.133 11.260 17.665Q11.735 18.197 11.963 18.501L11.963 18.501Q12.229 18.083 12.837 17.361L12.837 17.361ZM8.391 15.651L8.391 15.651Q8.239 15.385 7.935 14.853L7.935 14.853Q7.289 13.789 6.985 13.143L6.985 13.143L6.263 15.157Q6.909 15.423 8.391 15.651ZM16.713 13.143L16.713 13.143L15.307 15.651L17.435 15.271Q17.283 14.511 16.713 13.143ZM6.985 10.787L6.985 10.787L8.391 8.279L6.263 8.621L6.415 9.115Q6.681 10.217 6.985 10.787ZM15.307 8.279L15.307 8.279Q15.535 8.773 16.010 9.476Q16.485 10.179 16.713 10.673L16.713 10.673Q17.207 9.229 17.435 8.659L17.435 8.659Q16.523 8.621 15.307 8.279Z"/>
+                      </svg>
+                      <span class="astro-v5tidmuc">Use Lyvo in Web</span></p>
+                    <div class="body astro-v5tidmuc"><p>Learn more in <a href="browseruse/browser-web.html">Browser Use
+                      - Web</a>.</p></div>
+                  </article>
+                  <article class="card sl-flex astro-v5tidmuc">
+                    <p class="title sl-flex astro-v5tidmuc">
+                      <svg aria-hidden="true" class="icon astro-v5tidmuc astro-c6vsoqas" width="16" height="16"
+                           viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;">
+                        <path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/>
+                      </svg>
+                      <span class="astro-v5tidmuc">Use Lyvo in AI-Browser Fellou</span></p>
+                    <div class="body astro-v5tidmuc"><p>Learn more in <a href="computeruse/computer-fellou.html">Computer
+                      Use - Fellou</a>.</p></div>
+                  </article>
+                  <article class="card sl-flex astro-v5tidmuc">
+                    <p class="title sl-flex astro-v5tidmuc">
+                      <svg aria-hidden="true" class="icon astro-v5tidmuc astro-c6vsoqas" width="16" height="16"
+                           viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;">
+                        <path d="m17.73 11.2-.29-.13c-.17-3.13-1.88-4.92-4.75-4.94h-.04c-1.72 0-3.14.73-4.02 2.06l1.58 1.09a2.8 2.8 0 0 1 2.47-1.21c.94 0 1.66.28 2.12.81.33.4.56.93.67 1.61-.84-.14-1.74-.18-2.71-.13-2.73.16-4.49 1.75-4.37 3.97a3.41 3.41 0 0 0 1.57 2.71c.81.54 1.85.8 2.93.74a4.32 4.32 0 0 0 3.33-1.62 6 6 0 0 0 1.14-2.97 3.5 3.5 0 0 1 1.46 1.6 4 4 0 0 1-.98 4.4c-1.3 1.3-2.86 1.85-5.21 1.87-2.62-.02-4.6-.86-5.88-2.5-1.2-1.52-1.82-3.73-1.85-6.56.03-2.83.65-5.04 1.85-6.57 1.29-1.63 3.26-2.47 5.88-2.49 2.63.02 4.64.86 5.97 2.5.66.8 1.15 1.82 1.48 3l1.85-.5c-.4-1.44-1.02-2.7-1.86-3.73-1.71-2.1-4.21-3.19-7.44-3.21h-.01c-3.22.02-5.7 1.1-7.35 3.22C3.79 6.1 3.03 8.72 3 11.99V12c.03 3.29.79 5.9 2.27 7.78 1.66 2.12 4.13 3.2 7.35 3.22h.01c2.86-.02 4.88-.77 6.54-2.43a5.95 5.95 0 0 0 1.4-6.56 5.62 5.62 0 0 0-2.84-2.81Zm-4.94 4.64c-1.2.07-2.44-.47-2.5-1.62-.05-.85.6-1.8 2.57-1.92l.67-.02c.71 0 1.38.07 1.99.2-.23 2.84-1.56 3.3-2.73 3.36Z"/>
+                      </svg>
+                      <span class="astro-v5tidmuc">Architecture</span></p>
+                    <div class="body astro-v5tidmuc"><p>Learn more in <a href="architecture.html">Architecture</a>.</p>
+                    </div>
+                  </article>
+                  <article class="card sl-flex astro-v5tidmuc">
+                    <p class="title sl-flex astro-v5tidmuc">
+                      <svg aria-hidden="true" class="icon astro-v5tidmuc astro-c6vsoqas" width="16" height="16"
+                           viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;">
+                        <path d="M3.726 0.261L12 0.261L19.476 0.261Q21.030 0.261 22.206 1.227Q23.382 2.193 23.676 3.663L23.676 3.663Q23.802 3.915 23.802 4.461L23.802 4.461L23.802 19.413Q23.802 21.009 22.815 22.206Q21.828 23.403 20.274 23.613L20.274 23.613Q20.148 23.613 19.875 23.676Q19.602 23.739 19.476 23.739L19.476 23.739L4.650 23.739Q2.676 23.739 1.437 22.521Q0.198 21.303 0.198 19.413L0.198 19.413L0.198 4.587Q0.198 2.907 1.164 1.731Q2.130 0.555 3.726 0.261L3.726 0.261ZM3.726 12.063L3.726 12.063L3.726 19.539Q3.726 20.337 4.650 20.337L4.650 20.337L19.350 20.337Q19.728 20.337 20.001 20.064Q20.274 19.791 20.274 19.413L20.274 19.413L20.274 4.713Q20.148 4.209 19.917 3.999Q19.686 3.789 19.224 3.789L19.224 3.789L4.524 3.789Q4.020 3.789 3.810 3.999Q3.600 4.209 3.600 4.713L3.600 4.713Q3.726 7.065 3.726 12.063ZM6.876 10.341L6.876 10.341Q7.002 10.425 7.212 10.467L7.212 10.467L7.548 10.635Q8.010 10.803 8.913 11.265Q9.816 11.727 10.278 11.937L10.278 11.937Q10.488 12.021 10.530 12.021Q10.572 12.021 10.698 11.937L10.698 11.937L12.420 10.635Q15.066 8.661 16.452 7.737L16.452 7.737Q16.620 7.569 16.914 7.443L16.914 7.443Q17.082 7.401 17.124 7.359L17.124 7.359Q17.418 7.233 17.607 7.464Q17.796 7.695 17.796 7.989L17.796 7.989L17.628 8.241Q17.502 8.451 17.502 8.535L17.502 8.535Q16.830 9.417 15.528 11.307L15.528 11.307L14.226 13.113Q12.672 15.255 11.874 16.263L11.874 16.263Q11.370 17.019 10.698 16.977Q10.026 16.935 9.522 16.137L9.522 16.137L6.498 11.685Q6.204 11.391 6.204 11.265L6.204 11.265Q6.120 10.887 6.309 10.614Q6.498 10.341 6.876 10.341Z"/>
+                      </svg>
+                      <span class="astro-v5tidmuc">Roadmap</span></p>
+                    <div class="body astro-v5tidmuc"><p>Learn more in <a href="release/overview.html">Roadmap</a>.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <footer class="sl-flex astro-3yyafb3n">
+                <div class="meta sl-flex astro-3yyafb3n"></div>
+                <div class="pagination-links astro-u2l5gyhi" dir="ltr"></div>
+              </footer>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
